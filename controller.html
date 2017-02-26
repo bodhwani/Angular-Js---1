@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" 
+<head>
+	<title>Angular JS baby!! Controller </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body >
+<div ng-app="myFavLangApp" ng-controller="languages">
+	<button ng-click="php()">PHP</button>
+	<button ng-click="javascript()">Javascript</button>
+	<button ng-click="python()">Python</button></br>
+	You have selected : {{ mylanguage}}
+</div>
+
+<script>
+	var application = angular.module('myFavLangApp',[]);
+	application.controller('languages', ['$scope', function($scope){
+		$scope.php = function(){
+			$scope.mylanguage = "PHP";
+		}
+
+		$scope.javascript = function(){
+			$scope.mylanguage = "Javascript";
+		}
+
+		$scope.python = function(){
+			$scope.mylanguage = "Your favorite language baby!!!!"
+		}
+
+		
+	}])
+</script>
+	
+</body>
+
+</html>
